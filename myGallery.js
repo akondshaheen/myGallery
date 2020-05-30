@@ -28,21 +28,17 @@ function onPhotosReady(photos) {
       divCard = document.createElement("div");
       divCard.className = "card";
       divName = document.createElement("p");
-      divName.innerHTML =
-        photos.results[i].name.title +
-        " " +
-        photos.results[i].name.first +
-        " " +
-        photos.results[i].name.last;
+      divName.innerHTML = `${photos.results[i].name.title} ${photos.results[i].name.first} ${photos.results[i].name.last}`;
+
       divName.className = "card__name";
 
       divAge = document.createElement("div");
       divAge.className = "age";
-      divAge.innerHTML = "Age: " + photos.results[i].dob.age;
+      divAge.innerHTML = `Age: ${photos.results[i].dob.age}`;
 
       divGender = document.createElement("div");
       divGender.className = "gender";
-      divGender.innerHTML = "Gender: " + photos.results[i].gender;
+      divGender.innerHTML = `Gender: ${photos.results[i].gender}`;
 
       divIcon = document.createElement("ul");
       divIcon.className = "social-icons";
@@ -50,11 +46,11 @@ function onPhotosReady(photos) {
     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-    <li><a href="#"><i class="fa fa-codepen"></i></a></li>`;
+      <li><a href="#"><i class="fa fa-codepen"></i></a></li>`;
 
       let myDate = new Date(photos.results[i].dob.date);
       divDob = document.createElement("div");
-      divDob.innerHTML = "DOB: " + myDate.toDateString();
+      divDob.innerHTML = `DOB: ${myDate.toDateString()}`;
       divCol = document.createElement("div");
       divCol.className = "column";
     }
