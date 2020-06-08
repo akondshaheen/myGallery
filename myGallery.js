@@ -59,17 +59,22 @@ function onPhotosReady(photos) {
       show(photos);
       divRow = document.createElement("div");
       divRow.className = "row";
-      myList = [divImg, divName, divAge, divGender, divIcon, divDob];
-      myList.forEach((el) => divCard.appendChild(el));
-      divCol.appendChild(divCard);
-      divRow.appendChild(divCol);
-      app.appendChild(divRow);
+      // myList = [divImg, divName, divAge, divGender, divIcon, divDob];
+      // myList.forEach((el) => divCard.appendChild(el));
+      // divCol.appendChild(divCard);
+      // divRow.appendChild(divCol);
+      // app.appendChild(divRow);
     } else {
       show(photos);
-      myList = [divImg, divName, divAge, divGender, divIcon, divDob];
-      myList.forEach((el) => divCard.appendChild(el));
-      divCol.appendChild(divCard);
-      divRow.appendChild(divCol);
+      // myList = [divImg, divName, divAge, divGender, divIcon, divDob];
+      // myList.forEach((el) => divCard.appendChild(el));
+      // divCol.appendChild(divCard);
+      // divRow.appendChild(divCol);
     }
+    myList = [divImg, divName, divAge, divGender, divIcon, divDob];
+    myList.forEach((el) => divCard.appendChild(el));
+    divCol.appendChild(divCard);
+    divRow.appendChild(divCol);
+    app.appendChild(divRow);
   }
 }
